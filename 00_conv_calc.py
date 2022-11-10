@@ -88,13 +88,38 @@ def user_choice():
             print()
 
 
-# Asks user what unit they want to convert from
+# Asks user what unit they want to convert from and to
 def weight_conv():
 
     if user_choice == "weight":
         weight_from = input("Which unit would you like to convert from (mg, g, kg, t)? ")
         weight_to = input("Which unit would you like to convert to?")
+
+        if weight_from == "mg" or "milligrams":
+            return "from milligrams"
+
+        elif weight_from == "g" or "grams":
+            return "from grams"
         
+        elif weight_from == "kg" or "kilograms":
+            return "from kilograms"
+
+        elif weight_from == "t" or "tonnes":
+            return "from tonnes"
+
+        if weight_to == "mg" or "milligrams":
+            return "to milligrams"
+
+        elif weight_to == "g" or "grams":
+            return "to grams"
+        
+        elif weight_to == "kg" or "kilograms":
+            return "to kilograms"
+
+        elif weight_to == "t" or "tonnes":
+            return "to tonnes"
+
+
 # Main Routine goes here
 
 # Heading
